@@ -1,5 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, CreditCard, Lock } from "lucide-react";
+import stripeLogo from "@/assets/stripe.png";
+import visaLogo from "@/assets/visa.png";
+import mastercardLogo from "@/assets/mastercard.png";
+import paypalLogo from "@/assets/paypal.png";
 
 const PaymentSection = () => {
   return (
@@ -52,27 +56,22 @@ const PaymentSection = () => {
 
           {/* Payment Logos */}
           <div className="animate-fade-in-up">
-            <p className="text-sm text-muted-foreground mb-4">Trusted by thousands, secured by</p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Trusted by thousands, secured by
+            </p>
             <div className="flex justify-center items-center space-x-8 opacity-60">
               {/* Stripe Logo */}
-              <div className="bg-primary text-primary-foreground px-4 py-2 rounded font-bold text-sm">
-                stripe
-              </div>
-              
-              {/* Visa Logo */}
-              <div className="bg-blue-600 text-white px-4 py-2 rounded font-bold text-sm">
-                VISA
-              </div>
-              
-              {/* MasterCard Logo */}
-              <div className="bg-red-500 text-white px-4 py-2 rounded font-bold text-sm">
-                MasterCard
-              </div>
-              
-              {/* PayPal Logo */}
-              <div className="bg-blue-500 text-white px-4 py-2 rounded font-bold text-sm">
-                PayPal
-              </div>
+              <img src={stripeLogo} alt="Stripe" className="w-10" />
+
+              <img src={visaLogo} alt="Visa" className="w-10" />
+
+              <img
+                src={mastercardLogo}
+                alt="MasterCard"
+                className="w-10"
+              />
+
+              <img src={paypalLogo} alt="PayPal" className="w-10" />
             </div>
           </div>
         </div>

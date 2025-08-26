@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import coachPhoto from "@/assets/coach-photo.jpg";
+import coachPhoto from "@/assets/coach-photo.png";
 
 const AboutSection = () => {
   return (
@@ -70,8 +70,10 @@ const AboutSection = () => {
               </Card>
               
               <div className="mt-8">
-                <Button variant="cta" size="lg">
-                  Apply for Coaching
+                <Button variant="cta" size="lg" asChild>
+                  <a href="https://calendly.com/mahmoudfatanahas/30min" target="_blank">
+                    Apply for Coaching
+                  </a>
                 </Button>
               </div>
             </div>

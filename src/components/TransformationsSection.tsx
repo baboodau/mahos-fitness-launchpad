@@ -1,27 +1,32 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import transformationsImg from "@/assets/transformations.jpg";
+// import transformationsImg from "@/assets/transformations.jpg";
+import beforeImage from "@/assets/before.png";
+import afterImage from "@/assets/after.png";
 
 const TransformationsSection = () => {
   const testimonials = [
     {
       name: "Alex M.",
       result: "Lost 25lbs, Gained Confidence",
-      quote: "I went from feeling embarrassed to take my shirt off to being proud of my physique. Mahos helped me build sustainable habits that I'll keep for life.",
-      timeframe: "12 weeks"
+      quote:
+        "I went from feeling embarrassed to take my shirt off to being proud of my physique. Mahos helped me build sustainable habits that I'll keep for life.",
+      timeframe: "12 weeks",
     },
     {
-      name: "Sarah K.", 
+      name: "Sarah K.",
       result: "Transformed Body & Mindset",
-      quote: "Not only did I get the lean, toned body I wanted, but I also developed a healthy relationship with food and exercise. Best investment I've ever made.",
-      timeframe: "16 weeks"
+      quote:
+        "Not only did I get the lean, toned body I wanted, but I also developed a healthy relationship with food and exercise. Best investment I've ever made.",
+      timeframe: "16 weeks",
     },
     {
       name: "Mike D.",
       result: "Built Muscle, Lost Fat",
-      quote: "I thought I needed to choose between building muscle or losing fat. Mahos showed me how to do both simultaneously. The results speak for themselves.",
-      timeframe: "20 weeks"
-    }
+      quote:
+        "I thought I needed to choose between building muscle or losing fat. Mahos showed me how to do both simultaneously. The results speak for themselves.",
+      timeframe: "20 weeks",
+    },
   ];
 
   return (
@@ -34,38 +39,60 @@ const TransformationsSection = () => {
               Client Transformations
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real people, real results. See how my clients have transformed their 
-              bodies and lives in just 90 days.
+              Real people, real results. See how my clients have transformed
+              their bodies and lives in just 90 days.
             </p>
           </div>
 
           {/* Transformation Image */}
-          <div className="mb-16 animate-fade-in-up">
-            <img 
-              src={transformationsImg} 
-              alt="Client transformation results"
-              className="w-full max-w-4xl mx-auto rounded-lg soft-shadow"
-            />
+          <div className="mb-16 animate-fade-in-up flex items-center overflow-hidden">
+            <div className="overflow-hidden w-1/2">
+              <div className="text-center text-2xl font-bold">Before</div>
+              <img
+                src={beforeImage}
+                alt="Client transformation results"
+                className="object-cover"
+              />
+            </div>
+            <div className="overflow-hidden w-1/2">
+              <div className="text-center text-2xl font-bold">After</div>
+              <img
+                src={afterImage}
+                alt="Client transformation results"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           {/* Testimonials Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="soft-shadow hover:strong-shadow smooth-transition animate-fade-in-up">
+              <Card
+                key={index}
+                className="soft-shadow hover:strong-shadow smooth-transition animate-fade-in-up"
+              >
                 <CardContent className="p-6">
                   <div className="mb-4">
-                    <h3 className="font-semibold text-lg text-primary">{testimonial.name}</h3>
-                    <p className="text-sm text-success font-medium">{testimonial.result}</p>
-                    <p className="text-xs text-muted-foreground">{testimonial.timeframe}</p>
+                    <h3 className="font-semibold text-lg text-primary">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-sm text-success font-medium">
+                      {testimonial.result}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {testimonial.timeframe}
+                    </p>
                   </div>
-                  
+
                   <blockquote className="text-muted-foreground italic">
                     "{testimonial.quote}"
                   </blockquote>
-                  
+
                   <div className="flex mt-4">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
+                      <span key={i} className="text-yellow-400">
+                        ★
+                      </span>
                     ))}
                   </div>
                 </CardContent>
@@ -102,14 +129,16 @@ const TransformationsSection = () => {
               Ready to Be the Next Success Story?
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join hundreds of others who have transformed their bodies and lives. 
-              Your 90-day transformation starts with one click.
+              Join hundreds of others who have transformed their bodies and
+              lives. Your 90-day transformation starts with one click.
             </p>
-            <Button variant="cta" size="lg" className="mr-4">
-              Apply for Coaching
-            </Button>
-            <Button variant="outline" size="lg">
-              View More Results
+            <Button variant="cta" size="lg" className="mr-4" asChild>
+              <a
+                href="https://calendly.com/mahmoudfatanahas/30min"
+                target="_blank"
+              >
+                Apply for Coaching
+              </a>
             </Button>
           </div>
         </div>
