@@ -19,7 +19,7 @@ const Footer = () => {
                   href="mailto:coach@mahosfitness.com"
                   className="text-primary-foreground/80 hover:text-primary-foreground smooth-transition"
                 >
-                  coach@mahosfitness.com
+                  mahofitness@icloud.com
                 </a>
               </div>
             </div>
