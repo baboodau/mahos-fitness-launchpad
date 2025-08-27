@@ -54,7 +54,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/contact"
+                    href="/"
                     className="hover:text-primary-foreground smooth-transition"
                   >
                     Contact
